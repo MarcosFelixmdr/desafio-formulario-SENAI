@@ -1,0 +1,135 @@
+body { /*Colorindo fundo, definindo posição da caixa, adicionando uma fonte*/
+  background-color: #bdeaf6;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  height: 700px
+} 
+
+.container { /*Cor de fundo, espaçamento entre as caixas, bordas arredondadas, tamanho das caixas e sombra*/
+  background-color: #fffffd;
+  padding: 30px;
+  border-radius: 20px;
+  width: 1000%;
+  max-width: 420px;
+  box-shadow: 0px 4px 80px #99ccdc;
+}
+
+h1 {
+  color: #002244;
+  margin-bottom: 20px;
+  //text-align: center;
+}
+
+form fieldset { /*Cor das caixas menores, espaçamento entre elas, e borda*/
+  background-color: #c3e9eb;
+  border: none;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.titulo-secao { /*estilizando dados pessoais e profissionais, espaçamento entre textos e cor*/
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: #002244;
+  margin-top: 0;
+}
+
+.form-linha {/*caixas de input estilização*/
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.form-linha label { /*posição caixas de input*/
+  width: 110px;
+}
+
+.form-linha input, /*caixas de seleção*/
+.form-linha select,
+.form-linha textarea {
+  flex: 1;
+  padding: 6px;
+  border-radius: 4px;
+  border: 1px solid #aaa;
+  font-size: 14px;
+}
+
+textarea { /*área do mini curriculo*/
+  resize: vertical;
+}
+
+.grupo-radio{ /*posição das caixas de seleção de cargo, espaçamento entre as opções*/
+    margin-right: -10px;
+}
+.grupo-checkbox { /*posição das caixas de seleção de área de interesse, espaçamento entre as opções*/
+  margin-bottom: 15px;
+}
+
+.grupo-radio label,
+.grupo-checkbox label { /*distância entre as caixas de seleção e como mostra na tela, cursor muda e vira um pointer ao passar em cima*/
+  margin-right: 0px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+input[type="text"], /*Formatando caixas de input*/
+select {
+  margin-left: -45px;
+  max-width: 150px;
+}
+
+textarea { /*Formatando caixa de mini curriculo*/
+  margin-left: -15px;
+}
+
+input[type="radio"],
+input[type="checkbox"] { /*O mouse vira um pointer ao passar por cima das caixas de seleção*/
+  cursor: pointer;
+}
+
+.botoes { /*Definindo os botões*/
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+button { /*Estilizando botões*/
+  padding: 8px 20px;
+  font-weight: bold;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+  cursor: pointer;
+}
+
+button[type="submit"] { /*Selecionando cor do botão enviar*/
+  background-color: #0066cc;
+  color: white;
+}
+
+button[type="reset"] { /*Selecionando cor do botão limpar*/
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+@media (max-width: 480px) { /*Responsivo para celulares*/
+  .form-linha {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form-linha label {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .grupo-radio,
+  .grupo-checkbox {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
